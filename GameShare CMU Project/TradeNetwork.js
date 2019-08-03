@@ -27,7 +27,7 @@ db.collection("games").get().then(snapshot =>{
         gameImage.style.width = 100+"px"
         gameBox.appendChild(gameImage)
         getElementbyId("container").appendChild(gameBox)
-    var gameBox_id = doc.id
+    var gameBox_id = user.uid.id
     gameBox.id = gameBox_id
     
   }

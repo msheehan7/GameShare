@@ -1,0 +1,44 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    padding-left:30%;
+    padding-right:30%;
+    margin:0px;
+
+}
+#loginButton{
+    font-family: 'Open Sans', sans-serif;
+}
+.loginBox{
+    width: 20%;
+    height: 200px;
+    padding: 20px;
+    background: lightpink;
+    /* This is to make the div in the center */
+    margin: 150px auto;
+}
+.loginBox input{
+    margin-bottom: 20px;
+    margin-bottom: 15px;
+    padding: 5px ;
+    width:80%;
+    float:left;
+}
+.logoutBox{
+    width: 20%;
+    height: 150px;
+    padding: 20px;
+    background: lightpink;
+    /* This is to make the div in the center */
+    margin: 150px auto;
+}
+
+#signUpBox{
+    width: 20%;
+    height: 200px;
+    padding: 20px;
+    background: lightpink;
+    /* This is to make the div in the center */
+    float:left;
+
+
+}

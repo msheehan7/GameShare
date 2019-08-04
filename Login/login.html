@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title> GameShare Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href= "login.css">
+</head>
+
+<body>
+    
+    <div id = "signUpBox">
+      
+      <h3>Sign-Up For An Account!</h3>
+        <input type = "email" placeholder = "JohnDoe@gmail.com" id = "emailInputSignUp"/> <br>
+        <input type = "password" placeholder = "Password123" id = "passwordInputSignUp" /> <br>
+
+        <button id = "SignUpButton" onclick = "SignUp()">Sign-Up!</button>
+    </div>
+
+    </div>
+
+
+    <div id= "loginBox" class= "loginBox">
+        <h3>Log-in To Your Account</h3>
+        <input type = "email" placeholder = "JohnDoe@gmail.com" id = "emailInput"/> <br>
+        <input type = "password" placeholder = "Password123" id = "passwordInput" /> <br>
+
+        <button id = "loginButton" onclick = "login()">Login!</button>
+    </div>
+
+    <div class = "logoutBox" id = "logoutBox">
+        <h3>Welcome to GameShare!</h3>
+        <p id = "loggedin">You're currently logged in.</p>
+        <button onclick = "logout()">Logout</button>
+    </div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCzouSoNoVCIFO2QdzXyvpUlrAxP7ABJZk",
+    authDomain: "gameshare-1b851.firebaseapp.com",
+    databaseURL: "https://gameshare-1b851.firebaseio.com",
+    projectId: "gameshare-1b851",
+    storageBucket: "",
+    messagingSenderId: "804343057431",
+    appId: "1:804343057431:web:10ba27aee0a934dc"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src = "login.js"></script>
+
+
+
+</body>
+</html>

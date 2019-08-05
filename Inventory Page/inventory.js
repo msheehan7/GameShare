@@ -30,7 +30,7 @@ var firebaseConfig = {
 
 // saving data to the database
 function saveToDatabase(gameName,consoleName){
-    doc = db.collection("games").add({
+    doc = db.collection('users').doc('usersGames').collection('games').add({
         name: gameName,
         console: consoleName,
         // price: price,

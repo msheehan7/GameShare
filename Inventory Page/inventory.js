@@ -117,3 +117,14 @@ function addGame(doc) {
             console.log(gameName);
         }
 }
+function loadInventoryGames(){
+    db.collection("users").doc('usersGames').collection('games').get().then(function(querySnapshot){
+        querySnapshot.forEach(function(doc){
+            addGame(doc);
+            });
+        });
+    };
+
+$(document).ready(function(){
+    loadInventoryGames()
+  });

@@ -5,21 +5,22 @@ firebase.auth().onAuthStateChanged(function(user) {
       // User is signed in.
       document.getElementById("logoutBox").style.display = "block";
       document.getElementById("loginBox").style.display = "none";
-      document.getElementById("SignUpBox").style.display = "none";
+      document.getElementById("signUpBox").style.display = "none";
 
     // This is to make the profile specific to the customer 
-  var user = firebase.auth().currentUser; //sets the current user to variable
-  var name, email, photoUrl, uid, emailVerified;
+    var user = firebase.auth().currentUser; //sets the current user to variable
+    var name, email, photoUrl, uid, emailVerified;
   //the null thing is to make sure the user is still logged in dude
   if (user != null) {
     var email_id = user.email;
+
       //remember don't freak about innerHTML it just gets the info from the page
-    document.getElementById("loggedin").innerHTML = "welcome    " + email_id
+    document.getElementById("loggedin").innerHTML = "Welcome " + email_id
 
     }
-    } else { //dique syntax on a parenthesis
+    } else { 
       // No user is signed in.
-      
+      document.getElementById("signUpBox").style.display = "block";
       document.getElementById("logoutBox").style.display = "none";
       document.getElementById("loginBox").style.display = "block";
      // document.getElementById("SignUpBox").style.display = "block";
@@ -39,6 +40,8 @@ function login(){
         // ...
         window.alert("Error :" + errorMessage);
       });
+     document.getElementById("emailInput").value = "";
+     document.getElementById("passwordInput").value = "";
 }
 
 ////// Aii dude now it's time to mke the logout.....///////
@@ -65,6 +68,16 @@ function SignUp(){
 
 
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

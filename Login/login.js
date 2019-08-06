@@ -69,7 +69,7 @@ function SignUp(){
 }
 firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
   .then(function() {
-    return firebase.auth().signInWithEmailAndPassword(email, password);
+    return firebase.auth().signInWithEmailAndPassword(userEmail, userPassword));
   })
   .catch(function(error) {
     // Handle Errors here.

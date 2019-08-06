@@ -109,3 +109,11 @@ h1 {
             float: left;
             padding-left: 1%;
         }
+.btn-outline-success {
+    color: white;
+    border-color: white;
+}
+    .btn-outline-success:hover {
+        background-color: white;
+        color: black;
+    }

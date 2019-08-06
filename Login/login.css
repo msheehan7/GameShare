@@ -72,3 +72,11 @@ body{
 .boxxybox{
     margin-left: 10%;
 }
+.btn-outline-success {
+    color: white;
+    border-color: white;
+}
+    .btn-outline-success:hover {
+        background-color: white;
+        color: black;
+    }

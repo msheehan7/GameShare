@@ -66,8 +66,16 @@ function SignUp(){
    document.getElementById("emailInputSignUp").value = "";
    document.getElementById("passwordInputSignUp").value = "";
 
-
 }
+firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+  .then(function() {
+    return firebase.auth().signInWithEmailAndPassword(email, password);
+  })
+  .catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+  });
 
 
 

@@ -6,7 +6,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       document.getElementById("logoutBox").style.display = "block";
       document.getElementById("loginBox").style.display = "none";
       document.getElementById("signUpBox").style.display = "none";
-
+      console.log('signed in')
     // This is to make the profile specific to the customer 
     var user = firebase.auth().currentUser; //sets the current user to variable
     var name, email, photoUrl, uid, emailVerified;
@@ -23,6 +23,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       document.getElementById("signUpBox").style.display = "block";
       document.getElementById("logoutBox").style.display = "none";
       document.getElementById("loginBox").style.display = "block";
+      console.log('signed out')
      // document.getElementById("SignUpBox").style.display = "block";
   }
   });
@@ -68,32 +69,16 @@ function SignUp(){
 
 }
 
+firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+  .then(function() {
 
+    return firebase.auth().signInWithEmailAndPassword(email, password);
+  })
+  .catch(function(error) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    var errorCode = error.code;
+    var errorMessage = error.message;
+  });
 
 
 

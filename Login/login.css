@@ -24,7 +24,7 @@ body{
 }
 .logoutBox{
     width: 20%;
-    height: 150px;
+    height: 220px;
     padding: 20px;
     background: lightpink;
     /* This is to make the div in the center */
@@ -68,4 +68,7 @@ body{
     float: right;
     padding-right: 2%;
     color: white;
+}
+.boxxybox{
+    margin-left: 10%;
 }

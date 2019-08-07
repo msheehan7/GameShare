@@ -9,7 +9,7 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  var db = firebase.firestore();
+  const db = firebase.firestore();
 
   const auth = firebase.auth();
 
@@ -38,7 +38,7 @@ function saveToDatabase(gameName,consoleName){
         uid = user.uid
         console.log(user)
 
-        doc = db.collection('users').doc(uid).collection('games').set({
+        doc = db.collection('users').doc(uid).collection('games').add({
         name: gameName,
         console: consoleName,
         // price: price,
@@ -149,3 +149,20 @@ function addGame(doc) {
  $(document).ready(function(){
      loadInventoryGames()
    });
+
+
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        // User is signed in.
+        console.log('signed in')
+      // This is to make the profile specific to the customer 
+      var user = firebase.auth().currentUser; //sets the current user to variable
+      } else { 
+        // No user is signed in.
+       
+        console.log('signed out')
+    
+  
+  }
+  });

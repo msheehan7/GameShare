@@ -1,7 +1,6 @@
 body{
     font-family: 'Open Sans', sans-serif;
     margin:0px;
-
 }
 .loginBox{
     width: 40%;
@@ -17,7 +16,7 @@ body{
 }
 .loginBox input{
     margin-bottom: 20px;
-    margin-bottom: 15px;
+    margin-top: 15px;
     padding: 5px ;
     width:90%;
     float:left;
@@ -47,13 +46,11 @@ body{
     color: black;
     border-radius: 15px 50px;
     margin: 4%;
-
-
 }
 #signUpBox input{
     margin-bottom: 20px;
-    margin-bottom: 15px;
     padding: 5px ;
+     margin-top: 15px;
     width:90%;
     float:left;
 }
@@ -73,4 +70,18 @@ body{
 
 #closedEye, #closedEye2 {
     width: 20px;
+    margin-top:76px;
+    margin-left: 5px;
+}
+#SignUpButton {
+    border-radius: 12px;
+    margin-top: 10px;
+}
+#loginButton{
+    border-radius: 12px;
+    margin-top: 10px;
+}
+#logoutButton{
+     border-radius: 12px;
+     margin-bottom: 20px;
 }

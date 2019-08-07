@@ -38,7 +38,7 @@ function saveToDatabase(gameName,consoleName){
         uid = user.uid
         console.log(user)
 
-        doc = db.collection('users').doc(uid).collection('games').set({
+        doc = db.collection('users').doc(uid).collection('games').add({
         name: gameName,
         console: consoleName,
         // price: price,

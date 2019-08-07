@@ -30,7 +30,19 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 function showPassword() {
   var x = document.getElementById("passwordInputSignUp");
-  var img = document.getElementById("check1");
+  var img = document.getElementById("closedEye");
+    if (x.type === "password") {
+      x.type = "text";
+    img.src = "open_eye.png";
+    } else {
+    x.type = "password";
+    img.src = "closed_eye.png";
+    }
+}
+
+function showPassword2() {
+  var x = document.getElementById("passwordInput");
+  var img = document.getElementById("closedEye2");
     if (x.type === "password") {
       x.type = "text";
     img.src = "open_eye.png";

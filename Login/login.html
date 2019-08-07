@@ -54,9 +54,10 @@
     <div id = "signUpBox">
       
       <h3>Sign-Up For An Account!</h3>
-        <input type = "email" placeholder = "JohnDoe@gmail.com" id = "emailInputSignUp"/> <br>
-        <input type = "password" placeholder = "Password123" id = "passwordInputSignUp" /> <img src="open_eye.png"><br>
-
+        <input type = "email" placeholder = "JohnDoe@gmail.com" id = "emailInputSignUp"/> 
+        <br>
+        <input type = "password" placeholder = "Password123" id = "passwordInputSignUp" />
+        <img src="closed_eye.png" id="closedEye" onclick="showPassword()"> <br>
         <button id = "SignUpButton" onclick = "SignUp()">Sign-Up!</button>
     </div>
 
@@ -68,6 +69,7 @@
         <input type = "email" placeholder = "JohnDoe@gmail.com" id = "emailInput"/> 
         <br>
         <input type = "password" placeholder = "Password123" id = "passwordInput" /> 
+        <img src="closed_eye.png" id="closedEye2" onclick="showPassword2()">
         <br>
 
         <button id = "loginButton" onclick = "login()">Login!</button>

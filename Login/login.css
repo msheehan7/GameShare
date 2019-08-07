@@ -19,7 +19,7 @@ body{
     margin-bottom: 20px;
     margin-bottom: 15px;
     padding: 5px ;
-    width:95%;
+    width:90%;
     float:left;
 
 }
@@ -54,7 +54,7 @@ body{
     margin-bottom: 20px;
     margin-bottom: 15px;
     padding: 5px ;
-    width:95%;
+    width:90%;
     float:left;
 }
 .header {
@@ -70,5 +70,7 @@ body{
     padding-right: 2%;
     color: white;
 }
-.boxxybox{
+
+#closedEye, #closedEye2 {
+    width: 20px;
 }

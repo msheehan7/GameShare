@@ -135,7 +135,7 @@ function addGame(doc) {
 
  function loadInventoryGames(){
     var user = firebase.auth().currentUser
-    //if (user) {
+    if (user) {
         uid = user.uid
    db.collection("users").doc(uid).collection('games').get().then(function(querySnapshot){
          querySnapshot.forEach(function(doc){
@@ -143,7 +143,7 @@ function addGame(doc) {
         
             });
          });
-     //}
+     }
  
     }
  $(document).ready(function(){

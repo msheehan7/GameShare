@@ -28,6 +28,17 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
   });
 
+function showPassword() {
+  var x = document.getElementById("passwordInputSignUp");
+  var img = document.getElementById("check1");
+    if (x.type === "password") {
+      x.type = "text";
+    img.src = "open_eye.png";
+    } else {
+    x.type = "password";
+    img.src = "closed_eye.png";
+    }
+}
 
 //this actually logs you in dude and has a meassage if you mess up
 function login(){
@@ -79,18 +90,3 @@ firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
     var errorCode = error.code;
     var errorMessage = error.message;
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

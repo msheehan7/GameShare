@@ -1,4 +1,4 @@
-﻿body {
+body {
     background: white;
     color: black;
     margin: 0px;
@@ -71,3 +71,41 @@ h1 {
         background-color: white;
         color: black;
     }
+
+#gamePageInventory{
+        margin-top: 5%;
+        margin-left: 3%;
+        margin-right: 3%;
+        align-content: center;
+}
+    #games {
+        border-style: outset;
+        border-width: 5px;
+    }
+    
+    .gameSection {
+        background-color: #033860;
+        color: white;
+        height: 250px;
+        width: 250px;
+        padding-left: 0.5%;
+        padding-right: 0.5%;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+        display: inline-block;  
+        margin: 20px 20px 20px 20px;
+        border-radius: 15px;
+    }
+        .gamePicture {
+            height: 250px;
+            width: 150px;
+            float: right;
+            padding-left: 1%;
+            border-radius: 15px;
+        }
+        .gameFormInfo {
+            height: 150px;
+            width: 85px;
+            float: left;
+            padding-left: 1%;
+        }

@@ -11,6 +11,8 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   var db = firebase.firestore();
 
+  const auth = firebase.auth();
+
 // on submit function
     $("#gameForm").submit(function(e, img) {
         e.preventDefault();
@@ -30,17 +32,30 @@ var firebaseConfig = {
 
 // saving data to the database
 function saveToDatabase(gameName,consoleName){
-    doc = db.collection('users').doc('usersGames').collection('games').add({
+    var user = firebase.auth().currentUser
+    if (user) {
+        // User is signed in.
+        uid = user.uid
+        console.log(user)
+
+        doc = db.collection('users').doc(uid).collection('games').set({
         name: gameName,
         console: consoleName,
         // price: price,
-    })
-    .then(function(docRef){
+    }).then(function(docRef){
         docRef.get().then(function(doc){
             addGame(doc);
+            //gameOnPage(doc);
+            })
         })
-    })
-}
+
+
+      } else {
+          console.log('not signed in')
+        // No user is signed in.
+      }
+    }
+    
 // will take user input and put it on a kinda sticky note on page
 function addGame(doc) {
     // assigning variables to all elements
@@ -115,16 +130,22 @@ function addGame(doc) {
         } 
         else{
             console.log(gameName);
-        }
+    }
 }
-function loadInventoryGames(){
-    db.collection("users").doc('usersGames').collection('games').get().then(function(querySnapshot){
-        querySnapshot.forEach(function(doc){
-            addGame(doc);
-            });
-        });
-    };
 
-$(document).ready(function(){
-    loadInventoryGames()
-  });
+ function loadInventoryGames(){
+    var user = firebase.auth().currentUser
+    if (user) {
+        uid = user.uid
+   db.collection("users").doc(uid).collection('games').get().then(function(querySnapshot){
+         querySnapshot.forEach(function(doc){
+             addGame(doc);
+        
+            });
+         });
+     }
+ 
+    }
+ $(document).ready(function(){
+     loadInventoryGames()
+   });

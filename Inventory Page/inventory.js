@@ -134,25 +134,28 @@ function addGame(doc) {
 }
 
  function loadInventoryGames(){
-    var user = firebase.auth().currentUser
+    var user = firebase.auth().currentUser  
+    
+    firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         uid = user.uid
+        console.log(user.uid)
    db.collection("users").doc(uid).collection('games').get().then(function(querySnapshot){
          querySnapshot.forEach(function(doc){
+             
              addGame(doc);
         
             });
-         });
+        });
+   
      }
- 
-    }
+  })
+}
  $(document).ready(function(){
      loadInventoryGames()
    });
 
-
-
-firebase.auth().onAuthStateChanged(function(user) {
+   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         // User is signed in.
         console.log('signed in')

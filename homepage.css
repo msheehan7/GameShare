@@ -50,3 +50,12 @@ h1 {
         background-color: white;
         color: black;
     }
+.gamingSection {
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-bottom: 2%;
+}
+.img-thumbnail {
+    border-radius: 15px 50px;
+    border: 5px solid #033860;
+}

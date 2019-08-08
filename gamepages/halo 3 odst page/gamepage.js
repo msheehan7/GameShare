@@ -1,3 +1,4 @@
+//Game Page for MineCraft
 var firebaseConfig = {
     apiKey: "AIzaSyCzouSoNoVCIFO2QdzXyvpUlrAxP7ABJZk",
     authDomain: "gameshare-1b851.firebaseapp.com",
@@ -23,7 +24,7 @@ function saveToDatabase(gameName,consoleName){
         uid = user.uid
         console.log(user)
 
-        doc = db.collection('users').doc(uid).collection('games').add({
+        db.collection('users').doc(uid).collection('games').add({
         name: gameName,
         console: consoleName,
         // price: price,
@@ -35,6 +36,38 @@ function saveToDatabase(gameName,consoleName){
         })
     }
 }
+
+
+
+// function toProposal(){
+    
+//         var mineTrades = db.collection("minetrades")
+//         mineTrades.add({
+        
+//         // price: price,
+//     })
+//         mineTrades.get().then(function(mineTrades){
+//             addGame(mineTrades);
+//             //gameOnPage(doc);
+        
+//             })
+//         }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function addGame(doc) {
@@ -111,44 +144,77 @@ function addGame(doc) {
         else{
             console.log(gameName);
     }
+    
+    
+                firebase.auth().onAuthStateChanged(function(user) {
+                    var user = firebase.auth().currentUser  
+                if (user) {
+                    uid = user.uid
+                //creating id for inputs
+                var gameSection_id = doc.id
+                gameSection.id = gameSection_id
 
-    //creating id for inputs
-    var gameSection_id = doc.id
-    gameSection.id = gameSection_id
+                        //This is to make x click remove
+                        gameSection.addEventListener("click", function(){
+                        document.getElementById(gameSection.id)
+                        //make Sure to change the name of the game at the end of the below string
+                        
+                        //document.getElementById(gameSection.id).remove()
+                                //  db.collection('users').doc(uid).collection('games').doc(doc.id).delete();
+                                var question = confirm("Are you sure you want to trade " + doc.data().name + " for MineCraft. There will be a $5 processing and handling fee for this transaction")
+                        console.log(user.uid)
+                        
+                            if(question){
+                            
 
-    //This is to make x click remove
-    gameSection.addEventListener("click", function(){
-    document.getElementById(gameSection_id)
-    prompt("Are you sure you want to trade")
+                                //Other possibilty for tade 
 
-    });
+                                //add new collection where the proposed games from this page will be stored
+                                // db.collection('users').doc(uid).collection('games').doc(doc.id).get().then(function(querySnapshot) {
+                                //     querySnapshot.forEach(function(doc){
+                                //         var mineTrades = db.collection("minetrades").doc(doc.data().name, doc.data().console).set(doc.data());
+                                //     });
+                                // });
+                                console.log(doc.data().name)
+                                console.log(doc.data().console)
+
+                                var halo3 = db.collection("halo3")
+                                halo3.add({
+                                    
+                                    name: doc.data().name,
+                                    console: doc.data().console,
+                                }) 
+                                document.getElementById(gameSection.id).remove()
+                                //Use a sleep method to call after a certain amount of time
+                                db.collection('users').doc(uid).collection('games').doc(doc.id).delete();
+                                
+                                //  window.location.href = "confirmationPage.html"
+                                
+                                            }//else{
+                                            // alert('An error has occured. Please re-save your game to inventory')
+                                        //}
+                });
+            }
+        })
 }
-
-
-
-
-
-
-
-
-
+ 
 
 
  function loadInventoryGames(){
     var user = firebase.auth().currentUser  
-
+    
     firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         uid = user.uid
         console.log(user.uid)
    db.collection("users").doc(uid).collection('games').get().then(function(querySnapshot){
          querySnapshot.forEach(function(doc){
-
+        
              addGame(doc);
-
+        
             });
         });
-
+   
      }
   })
 }
@@ -164,9 +230,10 @@ firebase.auth().onAuthStateChanged(function(user) {
       var user = firebase.auth().currentUser; //sets the current user to variable
       } else { 
         // No user is signed in.
-
+       
         console.log('signed out')
-
-
+    
+  
   }
 })
+ 

@@ -178,7 +178,7 @@ function addGame(doc) {
                                 console.log(doc.data().name)
                                 console.log(doc.data().console)
 
-                                var mineTrades = db.collection("grandV")
+                                var grandV = db.collection("grandV")
                                 grandV.add({
                                     
                                     name: doc.data().name,

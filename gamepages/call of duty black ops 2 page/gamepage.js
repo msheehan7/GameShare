@@ -184,7 +184,7 @@ function addGame(doc) {
                                     name: doc.data().name,
                                     console: doc.data().console,
                                 }) 
-                                ocument.getElementById(gameSection.id).remove()
+                                document.getElementById(gameSection.id).remove()
                                 //Use a sleep method to call after a certain amount of time
                                 db.collection('users').doc(uid).collection('games').doc(doc.id).delete();
                                 setTimeout(function(){ window.location.href = "../confirmationPage/confirmationPage.html"}, 300)

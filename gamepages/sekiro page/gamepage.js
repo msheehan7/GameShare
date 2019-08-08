@@ -161,7 +161,7 @@ function addGame(doc) {
                         
                         //document.getElementById(gameSection.id).remove()
                                 //  db.collection('users').doc(uid).collection('games').doc(doc.id).delete();
-                                var question = confirm("Are you sure you want to trade " + doc.data().name + " for MineCraft. There will be a $5 processing and handling fee for this transaction")
+                                var question = confirm("Are you sure you want to trade " + doc.data().name + " for Sekiro: Shadows Die Twice. There will be a $5 processing and handling fee for this transaction")
                         console.log(user.uid)
                         
                             if(question){

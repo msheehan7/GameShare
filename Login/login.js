@@ -85,6 +85,7 @@ function SignUp(){
     firebase.auth().createUserWithEmailAndPassword(NewEmail,NewPassword).catch(function(error){
       var errorCode = error.code;
       var errorMessage = error.message;
+      window.alert("Error :" + errorMessage);
     });
 
    document.getElementById("emailInputSignUp").value = "";

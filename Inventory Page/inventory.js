@@ -24,6 +24,9 @@ var firebaseConfig = {
             var consoleName = document.getElementById("consoles").value;
             console.log(consoleName);
     saveToDatabase(gameName,consoleName,);
+    // resetting forms 
+        document.getElementById("gameName").value = "";
+        // document.getElementById("price").value = "";
     });
 
 
@@ -129,6 +132,7 @@ function addGame(doc) {
             console.log(gameName);
         }
 }
+
  function loadInventoryGames(){
     var user = firebase.auth().currentUser  
     
@@ -138,7 +142,7 @@ function addGame(doc) {
         console.log(user.uid)
    db.collection("users").doc(uid).collection('games').get().then(function(querySnapshot){
          querySnapshot.forEach(function(doc){
-             
+        
              addGame(doc);
         
             });

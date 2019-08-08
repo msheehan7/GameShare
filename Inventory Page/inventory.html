@@ -3,8 +3,7 @@
     <head>
         <title>Inventory</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
         <link href="inventory.css" rel="stylesheet" type="text/css">
     </head>
     <body>
@@ -56,7 +55,13 @@
             <h1 id="inventory">Inventory</h1>
             <div class="formSection">
                 <form id="gameForm">
-                    <p style="padding-bottom: 1%;">Game Name: <input style="outline: none;" type="text" id="gameName"></p>
+                    <p style="padding-bottom: 1%;">Game Name: <select id="gameName">
+                        <option value="Halo 3: ODST">Halo 3: ODST</option>
+                        <option value="Minecraft">Minecraft</option>
+                        <option value="Super Smash Bros. Ultimate">Super Smash Bros. Ultimate</option>
+                        <option value="The Last of Us">The Last of Us</option>
+                        <option value="Call of Duty: Black Ops 2">Call of Duty: Black Ops 2</option>
+                    </select></p>
                     <p style="padding-bottom: 1%;">Console:  <select id="consoles">
                         <option value="Xbox">Xbox</option>
                         <option value="Playsation">Playstation</option>

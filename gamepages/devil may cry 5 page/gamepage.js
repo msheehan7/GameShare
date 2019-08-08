@@ -178,7 +178,7 @@ function addGame(doc) {
                                 console.log(doc.data().name)
                                 console.log(doc.data().console)
 
-                                var mineTrades = db.collection("devilMay")
+                                var devilMay = db.collection("devilMay")
                                 devilMay.add({
                                     
                                     name: doc.data().name,

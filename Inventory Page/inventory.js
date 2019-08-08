@@ -24,9 +24,6 @@ var firebaseConfig = {
             var consoleName = document.getElementById("consoles").value;
             console.log(consoleName);
     saveToDatabase(gameName,consoleName,);
-    // resetting forms 
-        document.getElementById("gameName").value = "";
-        // document.getElementById("price").value = "";
     });
 
 
@@ -84,7 +81,7 @@ function addGame(doc) {
         container2.appendChild(gameSection);
 // depending on the game name user inserts, picture shows up beside it 
     // the last of us
-        if (doc.data().name === "the last of us" || doc.data().name === "The Last of Us"){
+        if (doc.data().name === "The Last of Us"){
             var gamePicture = document.createElement("div");
             var pic = document.createElement("img");
             pic.src = "https://www.playerattack.com/imagery/2012/08/TheLastOfUs-Cover.jpg";
@@ -92,7 +89,7 @@ function addGame(doc) {
             gamePicture.appendChild(pic);
             gameSection.appendChild(gamePicture);
     // halo 3: odst
-         } else if (doc.data().name === "halo 3: odst" || doc.data().name === "Halo 3: ODST"){  // halo 3: odst
+         } else if (doc.data().name === "Halo 3: ODST"){  // halo 3: odst
             var gamePicture = document.createElement("div");
             var pic = document.createElement("img");
             pic.src = "https://tinyurl.com/y65gn66r";
@@ -101,7 +98,7 @@ function addGame(doc) {
             gameSection.appendChild(gamePicture);
             console.log("this worked 1!")
     // super smash bros. ultimate
-        } else if (doc.data().name === "super smash bros ultimate" || doc.data().name === "super smash bros. ultimate" || doc.data().name === "Super Smash Bros. Ultimate"){     // super smash bros ultimate
+        } else if (doc.data().name === "super smash bros. ultimate" || doc.data().name === "Super Smash Bros. Ultimate"){     // super smash bros ultimate
             var gamePicture = document.createElement("div");
             var pic = document.createElement("img");
             pic.src = "https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Super_Smash_Bros._Ultimate.jpg/220px-Super_Smash_Bros._Ultimate.jpg";
@@ -110,7 +107,7 @@ function addGame(doc) {
             gameSection.appendChild(gamePicture);
             console.log("this worked 2!")
     // call of duty: black ops 2
-        } else if (doc.data().name === "call of duty black ops 2" || doc.data().name === "call of duty: black ops 2" || doc.data().name === "Call of Duty: Black Ops 2"){     // call of duty black ops 2
+        } else if (doc.data().name === "call of duty: black ops 2" || doc.data().name === "Call of Duty: Black Ops 2"){     // call of duty black ops 2
             var gamePicture = document.createElement("div");
             var pic = document.createElement("img");
             pic.src = "http://3.bp.blogspot.com/-V6wxRk6Y-T0/UKG6ae9HZRI/AAAAAAAABt0/xKe4hUHXqG0/s1600/Call+of+Duty+Black+Ops+2+Cover.jpg";
@@ -119,7 +116,7 @@ function addGame(doc) {
             gameSection.appendChild(gamePicture);
             console.log("this worked 3!")
     // minecraft
-        } else if (doc.data().name === "minecraft" || doc.data().name === "Minecraft"){     // minecraft
+        } else if (doc.data().name === "Minecraft"){     // minecraft
             var gamePicture = document.createElement("div");
             var pic = document.createElement("img");
             pic.src = "https://i0.wp.com/www.mondivirtuali.it/wp-content/uploads/2018/01/minecraft-record-cover.jpg?fit=650%2C400s";
@@ -130,9 +127,8 @@ function addGame(doc) {
         } 
         else{
             console.log(gameName);
-    }
+        }
 }
-
  function loadInventoryGames(){
     var user = firebase.auth().currentUser  
     

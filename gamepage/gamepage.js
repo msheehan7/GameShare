@@ -184,11 +184,11 @@ function addGame(doc) {
                                     name: doc.data().name,
                                     console: doc.data().console,
                                 }) 
-                                document.getElementById(gameSection.id).remove()
+                                 document.getElementById(gameSection.id).remove()
                                 //Use a sleep method to call after a certain amount of time
                                 db.collection('users').doc(uid).collection('games').doc(doc.id).delete();
-                                
-                                //  window.location.href = "confirmationPage.html"
+                                setTimeout(function(){ window.location.href = "../confirmationPage/confirmationPage.html"}, 300)
+                                 
                                 
                                             }//else{
                                             // alert('An error has occured. Please re-save your game to inventory')

@@ -168,18 +168,18 @@ function addGame(doc) {
                         //Change the names for each specified name 
                         if(doc.data().name === "minecraft"){
                             
-                            window.location.href = "minecraftTrades.html";
+                            window.location.href = "../tradePages/minecraftTrades.html";
                         }
                         if(doc.data().name === "Halo3:ODST"){
-                            window.location.href = "halo3Trades.html"
+                            window.location.href = "../tradePages/halo3odst.html.html"
                         }
                         if(doc.data().name === "Super Smash Bros.Ultimate"){
-                            window.location.href = "superTrades.html"
+                            window.location.href = "../tradePages/supersmashbros.html"
                         }if(doc.data().name === "The Last of Us"){
-                        window.location.href = "lastTrades.html"
+                        window.location.href = "../tradePages/thelastofus.html"
 
                         }if(doc.data().name === "Call of Duty: Black Ops 2"){
-                        window.location.href = "dutyTrades.html"
+                        window.location.href = "../tradePages/callofduty2.html.html"
                         }
                         
             })//else{

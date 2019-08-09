@@ -19,10 +19,10 @@ firebase.initializeApp(firebaseConfig);
 function saveToDatabase(){
     
 
-        var thelast = db.collection("thelast")
+        var theLast = db.collection("theLast")
         // price: price,
-    thelast.get().then(function(thelast){
-            addGame(thelast);
+    theLast.get().then(function(thelast){
+            addGame(theLast);
             //gameOnPage(doc);
             })
         }
@@ -30,7 +30,7 @@ function saveToDatabase(){
 
 
 
-function addGame(thelast) {
+function addGame(theLast) {
     // assigning variables to all elements
         var container2 = document.getElementById("gameProposal");
     // creating div elements
@@ -44,8 +44,8 @@ function addGame(thelast) {
         gameSection.classList.add("gameSection");
         gameFormInfo.classList.add("gameFormInfo");
     // changing inner.HTMLs
-        nameP.innerHTML = thelast.data().name;
-        consoleP.innerHTML = thelast.data().console;
+        nameP.innerHTML = theLast.data().name;
+        consoleP.innerHTML = theLast.data().console;
         // priceP.innerHTML = doc.data().price;
     // appending the p elements to the gameFormInfo
         gameFormInfo.appendChild(nameP);
@@ -57,7 +57,7 @@ function addGame(thelast) {
         container2.appendChild(gameSection);
 // depending on the game name user inserts, picture shows up beside it 
     // the last of us
-        if (thelast.data().name === "the last of us" || thelast.data().name === "The Last of Us"){
+        if (theLast.data().name === "the last of us" || theLast.data().name === "The Last of Us"){
             var gamePicture = document.createElement("div");
             var pic = document.createElement("img");
             pic.src = "https://www.playerattack.com/imagery/2012/08/TheLastOfUs-Cover.jpg";
@@ -65,7 +65,7 @@ function addGame(thelast) {
             gamePicture.appendChild(pic);
             gameSection.appendChild(gamePicture);
     // halo 3: odst
-         } else if (thelast.data().name === "halo 3: odst" || thelast.data().name === "Halo 3: ODST"){  // halo 3: odst
+         } else if (theLast.data().name === "halo 3: odst" || theLast.data().name === "Halo 3: ODST"){  // halo 3: odst
             var gamePicture = document.createElement("div");
             var pic = document.createElement("img");
             pic.src = "https://tinyurl.com/y65gn66r";
@@ -74,7 +74,7 @@ function addGame(thelast) {
             gameSection.appendChild(gamePicture);
             console.log("this worked 1!")
     // super smash bros. ultimate
-        } else if (thelast.data().name === "super smash bros ultimate" || thelast.data().name === "super smash bros. ultimate" || thelast.data().name === "Super Smash Bros. Ultimate"){     // super smash bros ultimate
+        } else if (theLast.data().name === "super smash bros ultimate" || theLast.data().name === "super smash bros. ultimate" || theLast.data().name === "Super Smash Bros. Ultimate"){     // super smash bros ultimate
             var gamePicture = document.createElement("div");
             var pic = document.createElement("img");
             pic.src = "https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Super_Smash_Bros._Ultimate.jpg/220px-Super_Smash_Bros._Ultimate.jpg";
@@ -83,7 +83,7 @@ function addGame(thelast) {
             gameSection.appendChild(gamePicture);
             console.log("this worked 2!")
     // call of duty: black ops 2
-        } else if (thelast.data().name === "call of duty black ops 2" || thelast.data().name === "call of duty: black ops 2" || thelast.data().name === "Call of Duty: Black Ops 2"){     // call of duty black ops 2
+        } else if (theLast.data().name === "call of duty black ops 2" || theLast.data().name === "call of duty: black ops 2" || theLast.data().name === "Call of Duty: Black Ops 2"){     // call of duty black ops 2
             var gamePicture = document.createElement("div");
             var pic = document.createElement("img");
             pic.src = "http://3.bp.blogspot.com/-V6wxRk6Y-T0/UKG6ae9HZRI/AAAAAAAABt0/xKe4hUHXqG0/s1600/Call+of+Duty+Black+Ops+2+Cover.jpg";
@@ -92,7 +92,7 @@ function addGame(thelast) {
             gameSection.appendChild(gamePicture);
             console.log("this worked 3!")
     // minecraft
-        } else if (thelast.data().name === "minecraft" || thelast.data().name === "Minecraft"){     // minecraft
+        } else if (theLast.data().name === "minecraft" || theLast.data().name === "Minecraft"){     // minecraft
             var gamePicture = document.createElement("div");
             var pic = document.createElement("img");
             pic.src = "https://www.mobygames.com/images/covers/l/489736-minecraft-windows-apps-front-cover.jpg";
@@ -105,14 +105,14 @@ function addGame(thelast) {
             console.log(gameName);
     }
 
-    var gameSection_id = thelast.id
+    var gameSection_id = theLast.id
     gameSection.id = gameSection_id
 
             //This is to make x click remove
             gameSection.addEventListener("click", function(){
             document.getElementById(gameSection.id)
             //make Sure to change the name of the game at the end of the below string
-            var thelast = db.collection("thelast")
+            var theLast = db.collection("theLast")
             //document.getElementById(gameSection.id).remove()
                     //  db.collection('users').doc(uid).collection('games').doc(doc.id).delete();
                     var question = confirm("Are you sure you want to trade this game for The Last of Us. There will be a $5 processing and handling fee for this transaction")
@@ -123,7 +123,7 @@ function addGame(thelast) {
                     
                     document.getElementById(gameSection.id).remove()
                     //Use a sleep method to call after a certain amount of time
-                    db.collection('thelast').doc(thelast.id).delete();
+                    db.collection('theLast').doc(theLast.id).delete();
                     
                       window.location.href = "../tradeConfirmationPage/tradeConfirmationPage.html"
                     
@@ -141,11 +141,11 @@ function addGame(thelast) {
 
  function loadGames(){
         
-        var thelast = db.collection("thelast")
-        thelast.get().then(function(querySnapshot){
-         querySnapshot.forEach(function(thelast){
+        var theLast = db.collection("theLast")
+        theLast.get().then(function(querySnapshot){
+         querySnapshot.forEach(function(theLast){
         
-             addGame(thelast);
+             addGame(theLast);
         
             });
         });

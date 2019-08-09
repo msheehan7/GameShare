@@ -166,7 +166,7 @@ function addGame(doc) {
 
                     //Change this to the specific game chosen
                         //Change the names for each specified name 
-                        if(doc.data().name === "minecraft"){
+                        if(doc.data().name === "Minecraft"){
                             
                             window.location.href = "../tradePages/minecraftTrades.html";
                         }

@@ -40,6 +40,7 @@ h1 {
     #inventory {
         text-align: center;
         padding-bottom: 2%;
+        color: black;
     }
     #gameForm {
         width: 350px;

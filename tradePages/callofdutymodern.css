@@ -97,8 +97,8 @@ h1 {
         border-radius: 15px;
     }
         .gamePicture {
-            height: 250px;
-            width: 150px;
+            height: 30%;
+            width: 60%;
             float: right;
             padding-left: 1%;
             border-radius: 15px;

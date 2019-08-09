@@ -125,7 +125,7 @@ function addGame(nba2) {
                     //Use a sleep method to call after a certain amount of time
                     db.collection('nba2').doc(nba2.id).delete();
                     
-                      window.location.href = "tradeConfirmationPage.html"
+                      window.location.href = "../tradeConfirmationPage/tradeConfirmationPage.html"
                     
                                 }//else{
                                 // alert('An error has occured. Please re-save your game to inventory')

@@ -173,7 +173,7 @@ function addGame(doc) {
                         if(doc.data().name === "Halo3:ODST"){
                             window.location.href = "../tradePages/halo3odst.html"
                         }
-                        if(doc.data().name === "Super Smash Bros.Ultimate"){
+                        if(doc.data().name === "Super Smash Bros. Ultimate"){
                             window.location.href = "../tradePages/supersmashbros.html"
                         }if(doc.data().name === "The Last of Us"){
                         window.location.href = "../tradePages/thelastofus.html"

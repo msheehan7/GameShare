@@ -125,7 +125,7 @@ function addGame(wolfenstein) {
                     //Use a sleep method to call after a certain amount of time
                     db.collection('wolfenstein').doc(wolfenstein.id).delete();
                     
-                      window.location.href = "tradeConfirmationPage.html"
+                      window.location.href = "../tradeConfirmationPage/tradeConfirmationPage.html"
                     
                                 }//else{
                                 // alert('An error has occured. Please re-save your game to inventory')

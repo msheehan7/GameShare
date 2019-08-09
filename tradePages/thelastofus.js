@@ -21,7 +21,7 @@ function saveToDatabase(){
 
         var theLast = db.collection("theLast")
         // price: price,
-    theLast.get().then(function(thelast){
+    theLast.get().then(function(theLast){
             addGame(theLast);
             //gameOnPage(doc);
             })

@@ -179,7 +179,7 @@ function addGame(doc) {
                         window.location.href = "../tradePages/thelastofus.html"
 
                         }if(doc.data().name === "Call of Duty: Black Ops 2"){
-                        window.location.href = "../tradePages/callofduty2.html.html"
+                        window.location.href = "../tradePages/callofduty2.html"
                         }
                         
             })//else{

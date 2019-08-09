@@ -125,7 +125,7 @@ function addGame(sekiro) {
                     //Use a sleep method to call after a certain amount of time
                     db.collection('sekiro').doc(sekiro.id).delete();
                     
-                      window.location.href = "tradeConfirmationPage.html"
+                      window.location.href = "../tradeConfirmationPage/tradeConfirmationPage.html"
                     
                                 }//else{
                                 // alert('An error has occured. Please re-save your game to inventory')

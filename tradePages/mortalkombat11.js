@@ -125,7 +125,7 @@ function addGame(mortalK) {
                     //Use a sleep method to call after a certain amount of time
                     db.collection('mortalK').doc(mortalK.id).delete();
                     
-                      window.location.href = "tradeConfirmationPage.html"
+                      window.location.href = "../tradeConfirmationPage/tradeConfirmationPage.html"
                     
                                 }//else{
                                 // alert('An error has occured. Please re-save your game to inventory')

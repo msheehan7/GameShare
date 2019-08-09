@@ -167,13 +167,10 @@ function addGame(doc) {
                     //Change this to the specific game chosen
                         //Change the names for each specified name 
                         if(doc.data().name === "Minecraft"){
-                            
                             window.location.href = "../tradePages/minecraftTrades.html";
-                        }
-                        if(doc.data().name === "Halo 3: ODST"){
+                        }if(doc.data().name === "Halo 3: ODST"){
                             window.location.href = "../tradePages/halo3odst.html"
-                        }
-                        if(doc.data().name === "Super Smash Bros. Ultimate"){
+                        }if(doc.data().name === "Super Smash Bros. Ultimate"){
                             window.location.href = "../tradePages/supersmashbros.html"
                         }if(doc.data().name === "The Last of Us"){
                         window.location.href = "../tradePages/thelastofus.html"

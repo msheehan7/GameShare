@@ -95,7 +95,7 @@ function addGame(wolfenstein) {
         } else if (wolfenstein.data().name === "minecraft" || wolfenstein.data().name === "Minecraft"){     // minecraft
             var gamePicture = document.createElement("div");
             var pic = document.createElement("img");
-            pic.src = "https://i0.wp.com/www.mondivirtuali.it/wp-content/uploads/2018/01/minecraft-record-cover.jpg?fit=650%2C400s";
+            pic.src = "https://www.mobygames.com/images/covers/l/489736-minecraft-windows-apps-front-cover.jpg";
             pic.classList.add("gamePicture");
             gamePicture.appendChild(pic);
             gameSection.appendChild(gamePicture);
